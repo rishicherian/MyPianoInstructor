@@ -4,13 +4,10 @@ import FirebaseCore
 @main
 struct MyPianoInstructorApp: App {
     init() {
-        if let path = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist") {
-            print("✅ DEBUG: GoogleService-Info.plist found at: \(path)")
-            
+        if Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist") != nil {
             FirebaseApp.configure()
-            print("✅ DEBUG: Firebase Configured Successfully!")
         } else {
-            print("❌ CRITICAL ERROR: GoogleService-Info.plist NOT FOUND in Bundle!")
+            print("Warning: GoogleService-Info.plist not found.")
         }
     }
 

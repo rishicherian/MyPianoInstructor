@@ -68,7 +68,6 @@ class ScoreManager {
             
             do {
                 try db.collection("leaderboard").addDocument(from: newEntry)
-                print("✅ Score uploaded for \(storedName): \(score)")
             } catch {
                 print("Error saving to cloud: \(error)")
             }
@@ -86,10 +85,6 @@ class ScoreManager {
             .order(by: "score", descending: true)
             .limit(to: 10)
             .getDocuments { snapshot, error in
-                
-                if let error = error {
-                    print("❌ FIRESTORE ERROR: \(error.localizedDescription)")
-                }
 
                 guard let documents = snapshot?.documents else {
                     DispatchQueue.main.async { completion([]) }

@@ -1,0 +1,10 @@
+# Mac System Files
+.DS_Store
+
+# Xcode User Data (Personal settings like window position)
+*.xcuserstate
+xcuserdata/
+
+# Build folders
+build/
+DerivedData/
