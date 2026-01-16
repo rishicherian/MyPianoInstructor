@@ -19,5 +19,4 @@ A full-stack iOS ear training application built with **SwiftUI** and **Firebase*
 3. Add your own `GoogleService-Info.plist` from Firebase to the root folder.
 4. Run on iPhone Simulator.
 
-## License
 Created by Rishi Cherian.
